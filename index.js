@@ -10,10 +10,9 @@ PermissionsBitField
 } = require("discord.js");
 
 const client = new Client({
-intents: [
-GatewayIntentBits.Guilds,
-GatewayIntentBits.GuildMembers
-]
+    intents: [
+        GatewayIntentBits.Guilds
+    ]
 });
 
 const DB = "./blacklist.json";
