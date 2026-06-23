@@ -9,12 +9,6 @@ EmbedBuilder,
 PermissionsBitField
 } = require("discord.js");
 
-const client = new Client({
-    intents: [
-        GatewayIntentBits.Guilds
-    ]
-});
-
 const DB = "./blacklist.json";
 
 function loadData() {
