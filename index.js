@@ -50,7 +50,7 @@ PermissionsBitField.Flags.Administrator
 {
 return interaction.reply({
 content:
-"❌ Bạn không có quyền.",
+"You do not have the authority to perform this action..",
 ephemeral: true
 });
 }
@@ -72,7 +72,7 @@ if (exist)
 {
 return interaction.reply({
 content:
-"⚠️ User đã blacklist.",
+" User đã blacklist.",
 ephemeral: true
 });
 }
@@ -111,7 +111,7 @@ new EmbedBuilder()
 .setColor("Red")
 
 .setTitle(
-"🛡️ BLACKLIST SYSTEM"
+" BLACKLIST SYSTEM"
 )
 
 .setThumbnail(
@@ -120,58 +120,58 @@ user.displayAvatarURL()
 
 .setDescription(
 
-`### ⚠️ USER ĐÃ BỊ BLACKLIST`
+`### USER ĐÃ BỊ BLACKLIST`
 
 )
 
 .addFields(
 
 {
-name: "📌 CASE ID",
+name: " CASE ID",
 value: `#${caseId}`,
 inline: false
 },
 
 {
-name: "👤 USER",
+name: " USER",
 value: `${user.tag}`,
 inline: false
 },
 
 {
-name: "🆔 UID",
+name: " UID",
 value: `${user.id}`,
 inline: false
 },
 
 {
-name: "📋 REASON",
+name: " REASON",
 value: reason,
 inline: false
 },
 
 {
-name: "👮 MODERATOR",
+name: " MODERATOR",
 value: interaction.user.tag,
 inline: false
 },
 
 {
-name: "🆔 MOD UID",
+name: " MOD UID",
 value:
 interaction.user.id,
 inline: false
 },
 
 {
-name: "📅 DATE",
+name: " DATE",
 value:
 new Date().toLocaleString(),
 inline: false
 },
 
 {
-name: "🔒 STATUS",
+name: " STATUS",
 value:
 "ACTIVE",
 inline: false
@@ -208,7 +208,7 @@ if (!exist)
 {
 return interaction.reply({
 content:
-"❌ Không tồn tại.",
+" Không tồn tại.",
 ephemeral: true
 });
 }
@@ -221,7 +221,7 @@ x => x.id !== user.id
 saveData(data);
 
 interaction.reply(
-`✅ Đã gỡ blacklist ${user.tag}`
+` Đã gỡ blacklist ${user.tag}`
 );
 
 }
@@ -243,7 +243,7 @@ x => x.id === user.id
 if (!record)
 {
 return interaction.reply(
-`✅ ${user.tag} không blacklist`
+` ${user.tag} không blacklist`
 );
 }
 
@@ -253,27 +253,27 @@ new EmbedBuilder()
 .setColor("DarkRed")
 
 .setTitle(
-"🔍 BLACKLIST CHECK"
+" BLACKLIST CHECK"
 )
 
 .addFields(
 
 {
-name: "📌 CASE",
+name: " CASE",
 value:
 `#${record.caseId}`,
 inline: false
 },
 
 {
-name: "👤 USER",
+name: " USER",
 value:
 record.tag,
 inline: false
 },
 
 {
-name: "🆔 UID",
+name: " UID",
 value:
 record.id,
 inline: false
